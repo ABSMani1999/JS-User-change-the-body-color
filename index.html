@@ -1,0 +1,31 @@
+<html>   
+    <head>
+        <title>User fav color change</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+    <body>
+        <div>
+            <input style="width:200px; height:50px; border:none; padding:10px;" type="text" placeholder="Please enter your fav color">
+            <button style="border:1px solid black; background-color:yellow; width:100px; cursor:pointer; height:50px;">Click Me</button>
+        </div>
+        <script>
+            var btn = document.querySelector('button');
+        
+            btn.addEventListener('click',userChangeColor)
+
+            function userChangeColor(){
+                var inputValue = document.querySelector('input').value;
+
+                var bodyEle = this.parentNode.parentNode;
+                
+                bodyEle.style.backgroundColor = inputValue;
+
+            }
+
+        </script>
+    </body>
+</html>   
